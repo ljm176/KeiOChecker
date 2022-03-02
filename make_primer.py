@@ -102,9 +102,10 @@ def write_primer_to_xl(f):
     for p, r in zip(primers, range(2, sheet2.max_row +1)):
         sheet2["B" + str(r)].value = str(p)
         sheet2["C" + str(r)].value = mt.Tm_Wallace(p)
+    primerFile = f[:-5] + "_Primers.xlsx"
+    wb2.save(primerFile)
     
-    wb2.save(f[:-5] + "_Primers.xlsx")
-    
+    return(primerFile)
     
 write_primer_to_xl("keioPrimers1.xlsx")
     

@@ -26,3 +26,4 @@ def list_positions(genes_list):
     for gene in genes_list:
         l.append(find_position(gene))
     return(l)
+
