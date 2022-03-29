@@ -59,13 +59,13 @@ def run(protocol):
     init_temp = 98
     init_time = 30 
     #set Denaturing
-    d_temp = 98
-    d_time = 10
+    d_temp = 94
+    d_time = 30
     #Set annealing
     a_temp = 52
     a_time = 20
     #Set Extension
-    e_temp = 72
+    e_temp = 68
     e_time = 45
     
     # Initial denaturing

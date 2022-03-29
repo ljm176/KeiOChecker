@@ -1,3 +1,5 @@
+strains = [[1, 'F7'], [3, 'G5'], [3, 'G7'], [4, 'B7'], [5, 'D8'], [3, 'B3'], [3, 'E9'], [2, 'C3'], [4, 'G3'], [3, 'E7']]
+
 metadata = {
     'protocolName': 'KeioCheck PCR',
     'author': 'Lachlan Munro',
