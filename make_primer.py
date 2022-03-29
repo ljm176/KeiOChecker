@@ -35,11 +35,11 @@ def get_primer_loc_5prime(gene):
     count=0
 
     while not 62 < mt.Tm_Wallace(primer) < 66 and not count > 20:
-        print(gene)
-        print(mt.Tm_Wallace(primer))
-        print("Count: " + str(count) )
-        print(n)
-        print(len(primer))
+        # print(gene)
+        # print(mt.Tm_Wallace(primer))
+        # print("Count: " + str(count) )
+        # print(n)
+        # print(len(primer))
         
         if mt.Tm_Wallace(primer) > 66:
             primer = coli_seq[primer_loc - n+1 : primer_loc]
@@ -91,13 +91,13 @@ def write_primer_to_xl(f):
     
     for row in range(2, sheet2.max_row +1):
         genes.append(sheet2["A" + str(row)].value)
-    print(genes)
+    #print(genes)
     primers = []
     for g in genes:
         primers.append(get_primer(g))
     sheet2["B1"].value = "Primers"
     sheet2["C1"].value = "Tm"
-    print(primers)
+    #print(primers)
     
     for p, r in zip(primers, range(2, sheet2.max_row +1)):
         sheet2["B" + str(r)].value = str(p)
